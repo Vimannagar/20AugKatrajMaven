@@ -15,13 +15,13 @@ import utility.ReadProperties;
 
 public class BaseTest {
 
-	static WebDriver driver;
+public	static WebDriver driver;
 
-	LoginPage loginpage;
+public	LoginPage loginpage;
 
-	HomePage homepage;
+public	HomePage homepage;
 
-	BuyProduct buyproduct;
+public	BuyProduct buyproduct;
 
 	@BeforeSuite
 	public void initBrowser() throws InterruptedException, IOException {

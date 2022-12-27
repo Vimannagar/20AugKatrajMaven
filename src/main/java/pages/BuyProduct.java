@@ -19,7 +19,7 @@ public class BuyProduct {
 	@FindBy(xpath = "(//*[@data-asin='B09GFPVD9Y']//div//h2//a)[1]")
 	private WebElement  mobilelink;
 	
-	@FindBy(xpath="//*[@id='add-to-cart-button']")
+	@FindBy(xpath="//*[@id='add-to-cart-button123']")
 	private WebElement addtocart;
 	
 	public BuyProduct(WebDriver driver)

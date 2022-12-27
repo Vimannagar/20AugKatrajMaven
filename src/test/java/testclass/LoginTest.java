@@ -5,9 +5,10 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import extentlisteners.TestNGListeners;
 import utility.ReadProperties;
 
-public class LoginTest extends BaseTest
+public class LoginTest extends TestNGListeners
 {
 		
 	@Test(priority = 2)

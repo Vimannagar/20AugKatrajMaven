@@ -11,7 +11,7 @@ import org.openqa.selenium.io.FileHandler;
 
 public class Screenshot {
 
-	public void captureScreenShot(WebDriver driver, String filename) throws IOException {
+	public String captureScreenShot(WebDriver driver, String filename) throws IOException {
 		TakesScreenshot scrshot = (TakesScreenshot) driver;
 
 		File source = scrshot.getScreenshotAs(OutputType.FILE);
@@ -23,6 +23,9 @@ public class Screenshot {
 		File destination = new File(path);
 
 		FileHandler.copy(source, destination);
+		
+		return path ;
+		
 	}
 
 	public static void main(String[] args) throws IOException {
