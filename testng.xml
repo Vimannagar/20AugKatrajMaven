@@ -7,9 +7,11 @@
 
   <test thread-count="5" name="Test">
     <classes>
-    <class name="testclass.LoginTest"/>
-      <class name="testclass.HomeTest"/>
-       <class name="testclass.BuyProductTest"/>
+    <class name="testclass.LoginNewTest"/>
+     <class name="testclass.CalenderTest"/>
+   <class name="testclass.MyTaskTest"/>
+   <class name="testclass.ClientTest"/>
+   
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

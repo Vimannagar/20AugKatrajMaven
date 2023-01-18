@@ -43,8 +43,9 @@ public class ExcelReader {
 
 	public static void writeData() throws IOException {
 
-		String path = System.getProperty("user.dir") + "\\KatrajTestData.xlsx";
+//		String path = System.getProperty("user.dir") + "\\KatrajTestData.xlsx";
 
+		String path = "C:\\Users\\DELL\\Desktop\\TestDataVimannagar.xlsx";
 		File src = new File(path);
 
 //		to load the excel sheet we are using fileinputstream class
@@ -53,14 +54,14 @@ public class ExcelReader {
 
 		XSSFWorkbook wb = new XSSFWorkbook(fis);
 
-		XSSFSheet sh1 = wb.getSheet("20AugSheet");
+		XSSFSheet sh1 = wb.getSheetAt(0);
 
 		File fout = new File(path);
 
 		FileOutputStream fos = new FileOutputStream(fout);
 
 //		row and colums are already created
-		sh1.getRow(0).getCell(1).setCellValue("Writing the data for 0th row");
+		sh1.getRow(0).getCell(1).setCellValue("kfksdfkjdshfkjsd");
 //		row and colums are already created		
 		sh1.getRow(6).getCell(0).setCellValue("Writing the data for 6th row");
 //		row and colums are not already created
@@ -74,8 +75,9 @@ public class ExcelReader {
 
 //		String path = "C:\\Users\\DELL\\Desktop\\KatrajTestData.xlsx";
 
-		String path = System.getProperty("user.dir") + "\\KatrajTestData.xlsx";
+//		String path = System.getProperty("user.dir") + "\\KatrajTestData.xlsx";
 
+		String path = "C:\\Users\\DELL\\Desktop\\TestDataVimannagar.xlsx";
 //		To handle file in java we have to file class object
 		
 		File src = new File(path);
@@ -86,7 +88,7 @@ public class ExcelReader {
 
 		XSSFWorkbook wb = new XSSFWorkbook(fis);
 
-		XSSFSheet sh1 = wb.getSheet("20AugSheet");
+		XSSFSheet sh1 = wb.getSheetAt(0);
 
 //		wb.getSheetAt(0);
 

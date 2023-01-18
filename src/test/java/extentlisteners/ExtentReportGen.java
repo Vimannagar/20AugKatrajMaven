@@ -4,12 +4,16 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+import utility.TimeStampPrinter;
+
 public class ExtentReportGen {
 	static ExtentReports extent;
 	
 	public static ExtentReports extentReportGenerator()
 	{
-		String path = System.getProperty("user.dir")+"\\reports\\KatrajBatchReport.html";
+		
+		String filename = "KatrajBatchReport"+TimeStampPrinter.getCurrentTime()+ ".html";
+		String path = System.getProperty("user.dir")+"//reports//"+filename;
 		
 		ExtentHtmlReporter reporter = new ExtentHtmlReporter(path);
 		

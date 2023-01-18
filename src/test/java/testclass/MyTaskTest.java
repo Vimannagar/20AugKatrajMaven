@@ -4,13 +4,15 @@ import org.testng.annotations.Test;
 
 import extentlisteners.TestNGListeners;
 
-public class BuyProductTest extends  TestNGListeners{
+public class MyTaskTest extends  TestNGListeners{
 	
-	@Test(priority = 5)
+	@Test(priority = 4)
 	public void verifyaddToCart()
 	{
 		test.info("adding the product inside the cart");
-		buyproduct.addToCart();
+		mytaskpage.navToMyTask();
+		
+		mytaskpage.addTask();
 		
 		
 	}

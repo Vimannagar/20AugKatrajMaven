@@ -3,7 +3,9 @@ package testclass;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class HomeTest extends BaseTest {
+import extentlisteners.TestNGListeners;
+
+public class HomeTest extends TestNGListeners {
 	
 	
 	
@@ -11,6 +13,8 @@ public class HomeTest extends BaseTest {
 	public void validateSearch()
 	{
 		homepage.searchProduct();
+		
+		test.info("product has been searched");
 	}
 	
 	
@@ -20,6 +24,8 @@ public class HomeTest extends BaseTest {
 		String title = loginpage.getTitleOfPage();
 		
 		boolean ispresent = title.contains("Mobile");
+		
+		test.info("verifying the title of the page");
 		
 		Assert.assertEquals(ispresent, true);
 		

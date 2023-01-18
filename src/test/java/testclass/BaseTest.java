@@ -9,8 +9,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
 import pages.BuyProduct;
+import pages.Calender;
+import pages.ClientPage;
 import pages.HomePage;
 import pages.LoginPage;
+import pages.LoginPageNew;
+import pages.MyTaskPage;
 import utility.ReadProperties;
 
 public class BaseTest {
@@ -23,6 +27,15 @@ public	HomePage homepage;
 
 public	BuyProduct buyproduct;
 
+public LoginPageNew loginpagenew;
+
+public MyTaskPage mytaskpage;
+
+public ClientPage clientpage;
+
+
+public Calender calender;
+
 	@BeforeSuite
 	public void initBrowser() throws InterruptedException, IOException {
 		driver = new ChromeDriver();
@@ -30,6 +43,8 @@ public	BuyProduct buyproduct;
 		driver.manage().window().maximize();
 
 		driver.get(ReadProperties.readProp("testsiteurl"));
+		
+		driver.manage().deleteAllCookies();
 
 		Thread.sleep(5000);
 	}
@@ -46,6 +61,14 @@ public	BuyProduct buyproduct;
 		homepage = new HomePage(driver);
 
 		buyproduct = new BuyProduct(driver);
+		
+		loginpagenew = new LoginPageNew(driver);
+		
+		calender = new Calender(driver);
+		
+		mytaskpage = new MyTaskPage(driver);
+		
+		clientpage = new ClientPage(driver);
 
 	}
 
